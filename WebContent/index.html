@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		<meta charset="ISO-8859-1">
+		<title>Send token</title>
+		<script src="websocket.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		</head>
+	<body>
+		<h3>S'identifier au WebSocket</h3>
+		<form id="formulaire">
+			<label>Token :</label>
+			<input type="text" id="inputToken"/>
+			<br><br>
+			<label>Type :</label>
+			<input type="text" id="inputType"/>
+			<br>
+			<br>
+			<input type="button" class="button" value="Connexion" onclick=initSession()>
+			<p id="output"></p>
+		</form>
+		<br><br>
+		<h3>Envoyer un message</h3>
+		<h5>(un type de smartphone ayant le même token)</h5>
+		<form id="formulaire">
+			<label>Message :</label>
+			<input type="text" id="input2Message"/>
+			<br><br>
+			<label>Type :</label>
+			<input type="text" id="input2Type"/>
+			<br>
+			<br>
+			<input type="button" class="button" value="Envoyer" onclick=sendMessageToType()>
+			<p id="output"></p>
+		</form>
+		
+		<form id="formulaire">
+			<input type="button" class="button" value="Broadcast" onclick=broadcast()>
+			<p id="output"></p>
+		</form>
+	</body>
+</html>
